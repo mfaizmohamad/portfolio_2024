@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
+import spider from '../../assets/spider.glb'
 
 const Model = () => {
-  const { scene, animations } = useGLTF('src/assets/spider.glb'); 
+  const { scene, animations } = useGLTF(spider); 
   const mixerRef = useRef();
 
   useEffect(() => {

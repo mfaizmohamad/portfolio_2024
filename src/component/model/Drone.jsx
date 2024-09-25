@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
+import drone from '../../assets/buster_drone.glb'
 
 const Model = () => {
-  const { scene, animations } = useGLTF('src/assets/buster_drone.glb'); 
+  const { scene, animations } = useGLTF(drone); 
   const mixerRef = useRef();
 
   useEffect(() => {

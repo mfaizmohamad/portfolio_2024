@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
+import securityBot from '../../assets/security_bot.glb'
 
 const Model = () => {
-  const { scene, animations } = useGLTF('src/assets/security_bot.glb'); 
+  const { scene, animations } = useGLTF(securityBot); 
   const mixerRef = useRef();
 
   useEffect(() => {

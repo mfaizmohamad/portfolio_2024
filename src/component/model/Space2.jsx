@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
+import space2 from '../../assets/space2.glb'
 
 const Model = () => {
-  const { scene, animations } = useGLTF('src/assets/space2.glb'); 
+  const { scene, animations } = useGLTF(space2); 
   const mixerRef = useRef();
 
   useEffect(() => {

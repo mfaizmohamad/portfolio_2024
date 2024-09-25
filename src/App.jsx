@@ -9,9 +9,11 @@ import Header from './component/header/Header';
 import Footer from './component/footer/Footer';
 import Carousel from './component/banner/Carousel';
 
+import drone from './assets/buster_drone.glb'
+
 
 const Model = ({ targetPosition }) => {
-  const { scene, animations } = useGLTF('src/assets/buster_drone.glb');
+  const { scene, animations } = useGLTF(drone);
   const mixerRef = useRef();
   const dronePositionRef = useRef(new Vector3(0, 12, 0)); // Keep track of drone's actual position
 

@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
+import robotArm from '../../assets/robotArm.glb'
 
 const Model = () => {
-  const { scene, animations } = useGLTF('src/assets/robotArm.glb'); 
+  const { scene, animations } = useGLTF(robotArm); 
   const mixerRef = useRef();
 
   useEffect(() => {

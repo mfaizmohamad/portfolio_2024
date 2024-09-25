@@ -4,11 +4,7 @@ import SecurityBot from '../model/SecurityBot';
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    '/docs/images/carousel/carousel-1.svg',
-    '/docs/images/carousel/carousel-2.svg',
-    '/docs/images/carousel/carousel-3.svg',
-    '/docs/images/carousel/carousel-4.svg',
-    '/docs/images/carousel/carousel-5.svg',
+   
   ];
 
   const nextSlide = () => {
