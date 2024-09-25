@@ -3,7 +3,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { Loader, OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer, Vector3 } from 'three';
 import Header from './component/header/Header';
 import Footer from './component/footer/Footer';
@@ -87,7 +87,7 @@ const DroneApp = () => {
         >
           <ambientLight intensity={2} />  
           <directionalLight position={[10, 10, 5]} intensity={1.5} />
-          <Model targetPosition={droneTargetPosition} />
+            <Model targetPosition={droneTargetPosition} />
           <OrbitControls minDistance={20} maxDistance={20} />
         </Canvas>
         <Header/>

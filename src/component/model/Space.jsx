@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
 import spaceStation from '../../assets/space_station.glb'
+import Loader from '../loader/Loader';
 
 const Model = () => {
   const { scene, animations } = useGLTF(spaceStation); 
@@ -33,7 +34,9 @@ const Space = () => {
       <Canvas camera={{ position: [0, 5, 10] }}> 
         <ambientLight intensity={2} />  
         <directionalLight position={[10, 10, 5]} intensity={1.5} />
-        <Model />
+        <Suspense fallback={<Loader/>}>
+           <Model />
+        </Suspense>        
         <OrbitControls minDistance={30} maxDistance={30} /> 
       </Canvas>
     </div>

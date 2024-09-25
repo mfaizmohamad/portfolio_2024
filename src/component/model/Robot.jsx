@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
 import robot from '../../assets/robot.glb'
+import Loader from '../loader/Loader';
 
 const Model = () => {
   const { scene, animations } = useGLTF(robot); 
@@ -33,7 +34,9 @@ const Robot = () => {
       <Canvas camera={{ position: [0, 0, 10] }}> 
        <ambientLight intensity={3} />  
         <directionalLight position={[10, 10, 5]} intensity={2} />
-        <Model />
+        <Suspense fallback={<Loader/>}>
+           <Model />
+        </Suspense>   
         <OrbitControls minDistance={10} maxDistance={10} /> 
       </Canvas>
     </div>

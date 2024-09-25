@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
 import drone from '../../assets/buster_drone.glb'
+import Loader from '../loader/Loader';
 
 const Model = () => {
   const { scene, animations } = useGLTF(drone); 
@@ -33,7 +34,9 @@ const Drone = () => {
       <Canvas camera={{ position: [0, 5, 10] }}> 
         <ambientLight intensity={1} />
         <directionalLight position={[10, 10, 5]} />
-        <Model />
+        <Suspense fallback={<Loader/>}>
+           <Model />
+        </Suspense>   
         <OrbitControls minDistance={10} maxDistance={10} /> 
       </Canvas>
     </div>
