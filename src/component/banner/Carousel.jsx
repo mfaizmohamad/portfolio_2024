@@ -16,7 +16,7 @@ const Carousel = () => {
   };
 
   return (
-    <div id="default-carousel" className="relative w-full bg-gray-200" data-carousel="slide">
+    <div id="default-carousel" className="relative w-full bg-black" data-carousel="slide">
       {/* Carousel wrapper */}
        <div className='absolute'>
          <SecurityBot/>

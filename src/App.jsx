@@ -10,6 +10,7 @@ import Footer from './component/footer/Footer';
 import Carousel from './component/banner/Carousel';
 
 import drone from './assets/buster_drone.glb'
+import StarsCanvas from './component/model/StarCanvas';
 
 
 const Model = ({ targetPosition }) => {
@@ -70,7 +71,8 @@ const DroneApp = () => {
 
   return (
     <>
-      <div className='h-[350vh] relative bg-[#f6f6f6]'>
+      <div className='h-[350vh] relative'>
+      <StarsCanvas/>
         <Canvas
           style={{
             position: 'absolute',
@@ -93,6 +95,7 @@ const DroneApp = () => {
         <div style={{ height: '100vh' }}><About /></div> 
         <div style={{ height: '50vh' }}><Carousel/></div>         
         <div style={{ height: '100vh' }}><Work /></div>  
+        
       </div>
       <Footer/>   
       
