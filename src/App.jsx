@@ -71,7 +71,7 @@ const DroneApp = () => {
 
   return (
     <>
-      <div className='h-[350vh] relative'>
+      <div className='h-[300vh] relative'>
       <StarsCanvas/>
         <Canvas
           style={{
@@ -93,7 +93,7 @@ const DroneApp = () => {
         <Header/>
         <div style={{ height: '100vh' }}><Home /></div>  
         <div style={{ height: '100vh' }}><About /></div> 
-        <div style={{ height: '50vh' }}><Carousel/></div>         
+        {/* <div style={{ height: '100vh' }}><Carousel/></div>          */}
         <div style={{ height: '100vh' }}><Work /></div>  
         
       </div>
