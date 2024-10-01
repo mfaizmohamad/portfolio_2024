@@ -96,14 +96,12 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            About
-          </a>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+
+          <a href="#about" className="text-sm font-semibold leading-6 text-gray-900">
             About
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#work" className="text-sm font-semibold leading-6 text-gray-900">
             Work
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">

@@ -7,7 +7,8 @@ import { Loader, OrbitControls, useGLTF } from '@react-three/drei';
 import { AnimationMixer, Vector3 } from 'three';
 import Header from './component/header/Header';
 import Footer from './component/footer/Footer';
-import Carousel from './component/banner/Carousel';
+
+import { BrowserRouter } from "react-router-dom";
 
 import drone from './assets/buster_drone.glb'
 import StarsCanvas from './component/model/StarCanvas';
@@ -70,8 +71,8 @@ const DroneApp = () => {
   }, []);
 
   return (
-    <>
-      <div className='h-[300vh] relative'>
+    <BrowserRouter>
+      <div className='h-[320vh] relative'>
       <StarsCanvas/>
         <Canvas
           style={{
@@ -91,15 +92,20 @@ const DroneApp = () => {
           <OrbitControls minDistance={20} maxDistance={20} />
         </Canvas>
         <Header/>
-        <div style={{ height: '100vh' }}><Home /></div>  
-        <div style={{ height: '100vh' }}><About /></div> 
-        {/* <div style={{ height: '100vh' }}><Carousel/></div>          */}
-        <div style={{ height: '100vh' }}><Work /></div>  
+        <div id="home" style={{ height: '100vh' }}>
+          <Home />
+        </div>
+        <div id="about" style={{ height: '120vh' }}>
+          <About />
+        </div>
+        <div id="work" style={{ height: '100vh' }}>
+          <Work />
+        </div>
         
       </div>
       <Footer/>   
       
-    </>
+      </BrowserRouter>
   );
 };
 

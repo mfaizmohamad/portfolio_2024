@@ -3,7 +3,7 @@ import CuteBot from "../model/CuteBot";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#E1E1E1] mt-10 ">
+    <footer className="bg-[#E1E1E1] mt-12 ">
       -<span className="absolute mt-[-10rem]">
           <CuteBot/>
         </span>
