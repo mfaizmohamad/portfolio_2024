@@ -41,7 +41,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-[#ECECEC] shadow-md">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
             <div className='absolute mt-[-15rem] ml-[-15rem]'><RobotArm/></div>       
@@ -58,11 +58,7 @@ export default function Header() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              About
-              <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
-            </PopoverButton>
-
+          
             <PopoverPanel
               transition
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
@@ -100,12 +96,15 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            About
+          </a>
 
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Work
+            About
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Skill
+            Work
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Contact Me
