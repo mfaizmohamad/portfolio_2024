@@ -1,0 +1,1 @@
+const o="/portfolio_2024/assets/spider-DqkbsgK9.glb",s="/portfolio_2024/assets/space_station-BFmw5Q1m.glb",t="/portfolio_2024/assets/robot-BgGl3_O8.glb",r="/portfolio_2024/assets/cuteBot-BJV9aL3Z.glb",a="/portfolio_2024/assets/robotArm-AEI2KErP.glb",e="/portfolio_2024/assets/buster_drone-DtRD6IwU.glb";export{s as a,a as b,r as c,e as d,t as r,o as s};
