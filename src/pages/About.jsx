@@ -38,9 +38,9 @@ const ServiceCard = ({ index, title, icon }) => {
 
 const About = () => {
   return (
-    <div className="flex w-full mb-10">
-      <div className="w-[50%]"><Spider /></div>
-      <div className="w-[50%]">
+    <div className="xs:flex w-full mb-10">
+      <div className="xs:w-[50%]"><Spider /></div>
+      <div className="w-[50%] xs:relative absolute z-10 xs:mt-0 mt-[-55rem]">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -48,7 +48,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] w-[400px] xs:w-[800px] text-justify xs:ml-0 ml-2  leading-[30px]"
       >
         I'm a skilled frontend developer with experience in CSS and JavaScript,
         and expertise in frameworks like React and Three.js. I'm a quick learner
@@ -63,7 +63,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-      <div className=' mt-10 flex flex-row flex-wrap justify-center gap-10'>
+      <div className=' mt-10 flex flex-row w-[400px] xs:w-full flex-wrap justify-center xs:gap-10'>
       {technologies.map((technology) => (
         <div className='w-28 h-28' key={technology.name}>
           <BallCanvas icon={technology.icon} />

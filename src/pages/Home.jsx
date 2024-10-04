@@ -4,8 +4,8 @@ import { styles } from "../styles";
 
 const Home = () => {
   return (
-    <div className='flex gap-10 w-full'>
-      <div className='w-[50%] flex justify-center items-center'>
+    <div className='xs:flex gap-10 w-full'>
+      <div className='w-[50%] flex justify-center bg-transparent xs:h-full h-[100vh] items-center'>
       <div
         className={`${styles.paddingX} absolute inset-0 
       top-[120px] max-w-7xl mx-auto flex flex-row items-start
@@ -30,7 +30,7 @@ const Home = () => {
         </div>
       </div>
       </div>
-      <div className='w-[50%]'>
+      <div className='xs:w-[50%] xs:relative absolute xs:mt-0 xs:mr-0 w-[100%] mt-[-40rem] mr-10'>
         <Space/>
       </div>
     </div>
